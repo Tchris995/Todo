@@ -19,39 +19,70 @@ body{background-color: var(--palleteorange);}
 }
 .col-4{
   background-color: var(--boxcolor);
-  height: 40vh;
-  width: 40vh;
+  height: 50vh;
+  width: 50vh;
   border-radius: 5%;
   color: aliceblue;
   margin: 3rem;
   
   justify-content: space-between;
+  overflow:auto;
 }
 
 .dynamic{
   display: grid;
-  grid-template-columns: repeat(3,1fr);
+  grid-template-columns: repeat(3, 1fr);
   background-color:gray;
+  width: 80%;
+  /* justify-content: center;
+  align-items: center;
+  align-content: center;
+   */
 } 
+
+.row{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
 
 .col-4 h3{
   text-align:center;
 }
 
-@media (min-width: 780px) {
+@media (min-width: 768px) {
   .dynamic {
     grid-template-columns: repeat(2, 1fr); /* 2 columns on tablets */
+    width: 95%;
   }
 }
 
-@media (max-width: 779px) {
-  .dynamic {
-    grid-template-columns: 1fr; /* 1 column on smaller screens */
-  }
-}
-
-@media (min-width: 995px) {
+@media (min-width: 992px) {
   .dynamic {
     grid-template-columns: repeat(3, 1fr); /* 1 column on smaller screens */
+    /* justify-content: center;
+    align-items: center; */
+  }
+}
+
+@media (min-width: 1000px) {
+  .dynamic {
+    grid-template-columns: repeat(3, 1fr); /* 1 column on smaller screens */
+
+  }
+}
+
+@media (max-width: 768px) {
+  #todobutton{
+    padding: 0.5rem 1rem;
+    font-size: 1rem; /* Adjust font size for smaller screens */
+    white-space: nowrap; /* Prevent text wrapping */
+    overflow: hidden; /* Hide overflow if necessary */
+    text-overflow: ellipsis; /
+  }
+
+  .dynamic {
+    grid-template-columns: 1fr; /* 1 column on smaller screens */
+
   }
 }
