@@ -86,3 +86,14 @@ body{background-color: var(--palleteorange);}
 
   }
 }
+
+
+@media (max-width: 480px) {
+  .dynamic {
+    grid-template-columns:1fr; /* 1 column on smaller screens */
+    
+    justify-content: center;
+    align-items: center;
+
+  }
+}
